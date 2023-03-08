@@ -1,17 +1,36 @@
-# Проект: Место
+# Проект: Место #
+_Проект был выполнен в целях самообразования на платформе Яндекс Практикум._
 
-### Обзор
+![N|Solid](https://i.ibb.co/fDtwkDn/1.png)
 
-* Figma
-* Картинки
+## Описание ##
+__Работа представляет с собой результат пройденных теоретических и практических знаний:__
+- Флексбокс-вёрстка
+- Grid Layout
+- Адаптивная вёрстка / First desktop
+- Расширенные возможности HTML и CSS
+- Базовый JavaScript
+- Позиционирование элементов
+- Структура файлов, пути к файлам
+- DOM
 
-**Figma**
 
-* [Ссылка на макет в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
+## Проверки ##
 
-**Картинки**
+- [W3C](http://www.css-validator.org/) - CSS Validation Service
+- [W3C](https://validator.w3.org/) - Markup Validation Service
+- [BEM](https://nglazov.github.io/bem-validator-page/) - BEMValidator
 
-Доставать картинки предстоит из Фигмы. Это расхожая практика, поэтому полезно потренироваться.
-Не забудьте [оптимизировать картинки](https://tinypng.com/), чтобы ваш сайт загружался быстрее.
+## Файловая структура ##
 
-Удачи!
+- БЭМ Nested.
+
+
+## Figma ##
+
+* [Ссылка на макет в Figma](https://www.figma.com/file/5S2WSbEFL6awjVWJ0NWL8Q/Sprint-3_-Russia-_-desktop-mobile?node-id=28503%3A0)
+
+## Gh-page ##
+
+* [Ссылка на выполненный проект]()
+
