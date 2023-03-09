@@ -7,5 +7,12 @@
 @media screen and (max-width: 767px) {
     .logo {
         padding: 0 0 31.6px 27px;
-    } 
+    }
+}
+
+@media screen and (max-width: 636px) {
+    .logo {
+        height: 24.4px;
+        width: 103.74px
+    }
 }

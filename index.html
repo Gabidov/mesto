@@ -16,16 +16,14 @@
     <main>
         <section class="profile page__container">
             <div class="profile__content">
-                <div class="profile__avatar">
-                    <img class="profile__avatar-img" src="./images/avatar.jpg" alt="Жак-Ив Кусто">
-                </div>
+                <img class="profile__avatar-img" src="./images/avatar.jpg" alt="Аватарка пользователя">
                 <div class="profile__about">
                     <h1 class="profile__info">Жак-Ив Кусто</h1>
-                    <button type="button" class="profile__editbutton page__button"></button>
+                    <button type="button" class="profile__edit-button page__button"></button>
                     <p class="profile__description">Исследователь океана</p>
                 </div>
             </div>
-            <button type="button" class="profile__addbutton page__button"></button>
+            <button type="button" class="profile__add-button page__button"></button>
         </section>
         <section class="elements page__container">
             <ul class="elements__list">
@@ -77,23 +75,17 @@
     <foooter class="footer page__container">
         <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
     </foooter>
-    <section class="popup">
+    <div class="popup">
         <div class="popup__container">
             <h2 class="popup__heading">Редактировать профиль</h2>
             <button type="button" class="popup__button-close page__button"></button>
-            <div class="popup__box">
-                <form class="popup__form">
-                    <div class="popup__input">
-                        <input type="text" class="popup__user">
-                    </div>
-                    <div class="popup__input">
-                        <input type="text" class="popup__description">
-                    </div>
-                    <button type="submit" class="popup__button-save page__button">Сохранить</button>
-                </form>
-            </div>
+            <form name="edit-profile" class="popup__form">
+                <input type="text" name="user" class="popup__input">
+                <input type="text" name="description" class="popup__input">
+                <button type="submit" class="popup__button-save page__button">Сохранить</button>
+            </form>
         </div>
-    </section>
+    </div>
     <script src="./script/script.js"></script>
 </body>
 
