@@ -9,14 +9,14 @@ const profileDescriptionElement = document.querySelector(".profile__description"
 
 // функция отвечающая за открытие модального окна и подтягивающая данные в поля //
 const openPopup = function() {
-    popupElement.classList.add("popup_is-opened")
+    popupElement.classList.add("popup_opened")
     nameInputElement.value = profileInfoElement.textContent;
     jobInputElement.value = profileDescriptionElement.textContent;
 };
 
 // функция отвечающая за закрытие модального окна //
 const closePopup = function() {
-    popupElement.classList.remove("popup_is-opened")
+    popupElement.classList.remove("popup_opened")
 };
 
 // функция отвечающая за редактирование полей страницы //
