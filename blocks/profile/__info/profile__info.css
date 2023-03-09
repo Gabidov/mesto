@@ -7,13 +7,10 @@
     line-height: 48px;
     /* or 114% */
     color: #FFFFFF;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
-
-/* @media screen and (max-width: 464px) {
-    .profile__info {
-        text-align: center;
-    }
-} */
 
 @media screen and (max-width: 633px) {
     .profile__info {
