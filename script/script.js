@@ -1,5 +1,3 @@
-console.log('Hello');
-
 // button like disable
 const buttonLikeDisableElement = document.querySelector('.elements__button-like');
 const buttonDeleteElement = document.querySelector('.elements__button-delete');
