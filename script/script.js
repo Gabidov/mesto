@@ -8,7 +8,7 @@ const popupAddCardElement = document.querySelector('.popup_form_addCard');
 const popupOpenImgElement = document.querySelector('.popup_form_openImg');
 
 // элементы popup в блоке popup form openImg
-const ZoomImageElement = popupOpenImgElement.querySelector('.popup__openImage');
+const zoomImageElement = popupOpenImgElement.querySelector('.popup__openImage');
 const descriptionZoomElement = popupOpenImgElement.querySelector('.popup__descrtion');
 
 // button закрытие popup
@@ -136,13 +136,10 @@ function createCard(data) {
 
   // функция открытия popup с картинкой
   imageElement.addEventListener('click', function () {
-    ZoomImageElement.alt = data.name;
+    zoomImageElement.alt = data.name;
     descriptionZoomElement.textContent = data.name;
-    ZoomImageElement.src = data.link;
-    const showImage = function () {
-      popupOpenImgElement.classList.add('popup_opened');
-    };
-    showImage();
+    zoomImageElement.src = data.link;
+    openPopup(popupOpenImgElement);
   });
  // Возвращаю получившуюся карточку
   return cloneCardElement;
