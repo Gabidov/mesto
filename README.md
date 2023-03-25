@@ -28,8 +28,14 @@ __Работа представляет с собой результат про�
 
 ## Figma ##
 
-* [Ссылка на макет в Figma](https://www.figma.com/file/5S2WSbEFL6awjVWJ0NWL8Q/Sprint-3_-Russia-_-desktop-mobile?node-id=28503%3A0)
+* [Ссылка на макет в Figma ч1](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0-1)
+* [Ссылка на макет в Figma ч2](https://www.figma.com/file/bjyvbKKJN2naO0ucURl2Z0/JavaScript.-Sprint-5?node-id=0-1&t=JXUe0RLfKe5d7W3z-0)
 
 ## Gh-page ##
 
 * [Ссылка на выполненный проект](https://gabidov.github.io/mesto/)
+
+## Планируемые доработки ##
+
+- сделать валидацию
+- настроить backend
