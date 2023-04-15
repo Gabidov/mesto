@@ -1,0 +1,21 @@
+.popup__input_invalid {
+    border-bottom: 1px solid red;
+}
+
+.popup__submit-button_valid {
+    border: 1px solid white;
+    color: white;
+    background-color: black;
+  }
+  
+  .popup__input_invalid {
+    border-bottom: 1px solid rgb(255, 0, 0);
+    color: rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+  }
+  
+  .popup__input_invalid:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s linear;
+  }
+  
