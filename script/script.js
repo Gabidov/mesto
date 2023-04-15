@@ -122,14 +122,14 @@ popupButtonOpenElement.addEventListener('click', function () {
 });
 
 // функция отвечающая за редактирование и сохранение полей страницы //
-function handleFormSubmit(evt) {
+function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   profileInfoElement.textContent = nameInputElement.value;
   profileDescriptionElement.textContent = jobInputElement.value;
   closePopup(popupEditProfileElement);
 };
 // обработчик событий на редактирование и сохранение полей страницы
-formElement.addEventListener('submit', handleFormSubmit);
+formElement.addEventListener('submit', handleProfileFormSubmit);
 
 // обработчик событий на добавление карточки 
 buttonOpenAddCardElement.addEventListener('click', function () {
@@ -157,19 +157,20 @@ buttonCloseOpenImgElement.addEventListener('click', function () {
 
 // функкция создания карточек 
 function createCard(data) {
-  const cloneCardElement = templateItemElement.cloneNode(true); // в эту переменную положил клонируемый темплейт  
-  const imageElement = cloneCardElement.querySelector('.elements__item');
-  const titleElement = cloneCardElement.querySelector('.elements__title');
+  // const cloneCardElement = templateItemElement.cloneNode(true);  
+  const copyCardElement = templateItemElement.querySelector('.elements__card').cloneNode(true); // в эту переменную положил клонируемый темплейт 
+  const imageElement = copyCardElement.querySelector('.elements__item');
+  const titleElement = copyCardElement.querySelector('.elements__title');
   titleElement.textContent = data.name;
   imageElement.alt = data.name;
   imageElement.src = data.link;
   // Обработчик событий на лайк к карточке.
-  const buttonLikeElement = cloneCardElement.querySelector('.elements__button-like');
+  const buttonLikeElement = copyCardElement.querySelector('.elements__button-like');
   buttonLikeElement.addEventListener('click', function (evt) {
     evt.target.classList.toggle('elements__button-like_active');
   });
   // Обработчик событий на удаление карточки
-  cloneCardElement.querySelector('.elements__button-delete').addEventListener('click', function (event) {
+  copyCardElement.querySelector('.elements__button-delete').addEventListener('click', function (event) {
     event.target.closest('.elements__card').remove();
   });
 
@@ -181,7 +182,7 @@ function createCard(data) {
     openPopup(popupOpenImgElement);
   });
  // Возвращаю получившуюся карточку
-  return cloneCardElement;
+  return copyCardElement;
 }
 
 // Добавление карточек в разметку
