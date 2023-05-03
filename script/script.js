@@ -31,18 +31,15 @@ const popupButtonOpenElement = document.querySelector('.profile__edit-button');
 const buttonOpenAddCardElement = document.querySelector('.profile__add-button');
 
 //? Выбор элемента формы первая, которая находится. edit profile
-const formElement = document.querySelector(".popup__form");
+const formEditProfile = document.querySelector(".popup__form");
 
 //! выбор формы добавления карточки
 const formAddCard = document.querySelector('form[name=addPhoto]');
 const formAddPhotoElement = document.querySelector('#formAddPhoto')
 
-//! выбор формы редактирование профиля
-const formEditProfile = document.querySelector('form[edit-profile]');
-
 // Input в form popup блок profile  
-const nameInputElement = formElement.querySelector('input[name="user"');
-const jobInputElement = formElement.querySelector('input[name="description"');
+const nameInputElement = formEditProfile.querySelector('input[name="user"');
+const jobInputElement = formEditProfile.querySelector('input[name="description"');
 
 // Input в form popup addCard + // для валидации при открытии попапа 
 const denotationInputElement = document.querySelector('input[name="denotation"');
@@ -122,7 +119,7 @@ function handleProfileFormSubmit(evt) {
 };
 
 //* обработчик событий на редактирование и сохранение полей страницы 
-formElement.addEventListener('submit', handleProfileFormSubmit); 
+formEditProfile.addEventListener('submit', handleProfileFormSubmit); 
 
 //* обработчик событий на добавление карточки 
 buttonCloseProfileEditElement.addEventListener('click', function () {
@@ -175,7 +172,7 @@ function handleFormCardSubmit(evt) {
 //* Обработчик событий на добавление картинки
 formAddCard.addEventListener('submit', handleFormCardSubmit);
 
-const formEditProfileValidation = new FormValidator(objectForValidate, formElement)
+const formEditProfileValidation = new FormValidator(objectForValidate, formEditProfile)
 formEditProfileValidation.enableValidation();
 
 const formAddCardValidation = new FormValidator(objectForValidate, formAddCard)

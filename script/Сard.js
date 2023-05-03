@@ -42,11 +42,3 @@ export default class Card {
       return this._cloneElement;
     }
   }
-
-//   const objectNameUrl = { name: denotationInputElement.value, link: urlInputElement.value };
-//   const card = new Card(objectNameUrl, selectorTemplate, openImgPopup);
-//   makeNewCard(card, listCardElement)
-//   // elementListElement.prepend(createCard(objectNameUrl));
-//   // event.target.reset();
-//   closePopup(popupAddCardElement);
-// const listCardElement = document.querySelector('.elements__card');
