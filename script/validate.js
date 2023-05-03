@@ -1,5 +1,3 @@
-console.log('Работаем!')
-
 // Объект для валидации //
 const objectForValidate = {
     allforms: document.forms,
@@ -13,9 +11,9 @@ const objectForValidate = {
 
 enableValidation(objectForValidate);
 
-
+ // создал массив из объекта //
 function enableValidation(object) {
-    const forms = Array.from(object.allforms) // создал массив из объекта //
+    const forms = Array.from(object.allforms)
     forms.forEach((form) => {
         const inputList = form.querySelectorAll(object.inputSelector);
         const button = form.querySelector(object.activeButtonSelector);
@@ -24,15 +22,14 @@ function enableValidation(object) {
 }
 
 
-function handEventListnear(inputList, button, selectorTemplate,  disableButtonSelector, inputErrorClass, textErrorClass) {
-    inputList.forEach((input) => {
-        input.addEventListener('input', () => {
-            checkInputValidation(input, selectorTemplate, inputErrorClass, textErrorClass);
-            toggleButton(inputList, button, disableButtonSelector);
-        })
-    })
-}
-
+// function handEventListnear(inputList, button, selectorTemplate,  disableButtonSelector, inputErrorClass, textErrorClass) {
+//     inputList.forEach((input) => {
+//         input.addEventListener('input', () => {
+//             checkInputValidation(input, selectorTemplate, inputErrorClass, textErrorClass);
+//             toggleButton(inputList, button, disableButtonSelector);
+//         })
+//     })
+// }
 
 function checkInputValidation(input, selectorTemplate, inputErrorClass, textErrorClass) {
     const errorText = document.querySelector(`${selectorTemplate}${input.name}`);
@@ -44,18 +41,18 @@ function checkInputValidation(input, selectorTemplate, inputErrorClass, textErro
 }
 
 // function убирающая ошибку в форме
-function hideInputError(input, errorText, inputErrorClass, textErrorClass) {
-    input.classList.remove(inputErrorClass);
-    errorText.textContent = '';
-    errorText.classList.remove(textErrorClass);
-  }
+// function hideInputError(input, errorText, inputErrorClass, textErrorClass) {
+//     input.classList.remove(inputErrorClass);
+//     errorText.textContent = '';
+//     errorText.classList.remove(textErrorClass);
+//   }
   
 // function демонстрирует пользователю ошибку при вводе
-  function showInputError(input, errorText, inputErrorClass, textErrorClass) {
-    input.classList.add(inputErrorClass);
-    errorText.textContent = input.validationMessage;
-    errorText.classList.add(textErrorClass);
-  }
+//   function showInputError(input, errorText, inputErrorClass, textErrorClass) {
+//     input.classList.add(inputErrorClass);
+//     errorText.textContent = input.validationMessage;
+//     errorText.classList.add(textErrorClass);
+//   }
 
   // function проверяет валидность инпутов + меняет кнопку в зависимости от валидности
   function toggleButton(inputList, button, disableButtonSelector) {
