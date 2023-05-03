@@ -103,8 +103,8 @@ popupOpenImgElement.addEventListener('click', closePopupByClickOnOverlay);
 
 //! обработчик событий на редактирование профиля 
 popupButtonOpenElement.addEventListener('click', function () {
-  formEditProfile.reset()
-  formPersonalDataValidation.resetErrorForOpenElement();
+  // formEditProfile.reset()
+  // formPersonalDataValidation.resetErrorForOpenElement();
   nameInputElement.value = profileInfoElement.textContent;
   jobInputElement.value = profileDescriptionElement.textContent;
   openPopup(popupEditProfileElement);
