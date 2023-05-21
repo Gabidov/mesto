@@ -1,0 +1,25 @@
+{
+  "name": "yandex_praktikum",
+  "version": "0.0.1",
+  "description": "_Проект был выполнен в целях самообразования на платформе Яндекс Практикум._",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gabidov/mesto.git"
+  },
+  "author": "Emil Gabidov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gabidov/mesto/issues"
+  },
+  "homepage": "https://github.com/Gabidov/mesto#readme",
+  "devDependencies": {
+    "webpack": "^5.83.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
+  }
+}
