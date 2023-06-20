@@ -32,25 +32,31 @@ Array.from(document.forms).forEach(item => {
   form.enableValidation();
 })
 
+function makeNewCard(element) {
+  const newCard = new Card(element, selectorTemplate, popupImage.open);
+   return newCard.createCard();
+ } 
 
  //* экземпляр класса Section с первоначальными картинками и function создании разметки.
 const unit = new  Section({
   items: initialCards,
   renderer: (element) => {
-    const cards = new Card(element, selectorTemplate, popupImage.open);
-    return cards.createCard(); 
+    unit.addItem(makeNewCard(element)); 
   }
 }, listElementSelector)
+
 unit.addCardFromArray();
 
 //* экземпляр класса PopupWhithForm для form редактирования профиля.
-const popupProfile = new PopupWhithForm(popupProfileSelector, (info) => {
-  userInfo.setUserInfo(info);
+const popupProfile = new PopupWhithForm(popupProfileSelector, (data) => {
+  userInfo.setUserInfo(data);
+  popupProfile.close();
 })
 
 //* экземпляр класса PopupWhithForm для form добавления картинок
-const popupAddCard = new PopupWhithForm(popupAddcardSelector, (info) => {
-  unit.addItem(info);
+const popupAddCard = new PopupWhithForm(popupAddcardSelector, (data) => {
+  unit.addItem(makeNewCard(data));
+  popupAddCard.close();
 })
 
 //? слушатели клика на каждый popup (крестик, оверлей).

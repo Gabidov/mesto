@@ -53,7 +53,6 @@ export default
     }  
   }
 
-
   _configEventListener() {
     this._inputList.forEach(input => {
       input.addEventListener('input', () => {

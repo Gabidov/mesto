@@ -3,9 +3,9 @@ import Popup from "./Popup.js";
 
 //todo наследуется от Popup для всех остальных popup'ов.
 export default class PopupWhithForm extends Popup {
-    constructor(popupSelector, functionSubmit) {
+    constructor(popupSelector, submitFunction) {
         super(popupSelector);
-        this._functionSubmit = functionSubmit;
+        this._submitFunction = submitFunction;
         this._form = this._popup.querySelector('.popup__form');
         this._inputList = this._form.querySelectorAll('.popup__input')
     }
@@ -15,7 +15,7 @@ export default class PopupWhithForm extends Popup {
         super.setEventListeners();
         this._form.addEventListener('submit', (evt) => {
             evt.preventDefault();
-            this._functionSubmit(this._getInputValue())
+            this._submitFunction(this._getInputValue())
             this.close();
         })
     }
