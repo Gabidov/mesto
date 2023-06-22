@@ -5,18 +5,18 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="icon" href="./images/logo.svg"> 
-    <link rel="stylesheet" href="./src/pages/index.css"> 
+    <!-- <link rel="stylesheet" href="./src/pages/index.css">  -->
     <title>Mesto</title> 
 </head> 
  
 <body class="page"> 
     <header class="header page__container"> 
-        <img class="logo" src="./src/images/logo.svg" alt="Логотип фраза mesto Russia"> 
+        <img class="logo" src="<%=require('./images/logo.svg')%>" alt="Логотип фраза mesto Russia"> 
     </header> 
     <main> 
         <section class="profile page__container"> 
             <div class="profile__content"> 
-                <img class="profile__avatar-img" src="./src/images/avatar.jpg" alt="Аватарка пользователя"> 
+                <img class="profile__avatar-img" src="<%=require('./images/avatar.jpg')%>" alt="Аватарка пользователя"> 
                 <div class="profile__about"> 
                     <h1 class="profile__info">Жак-Ив Кусто</h1> 
                     <button type="button" class="profile__edit-button button"></button> 
@@ -110,7 +110,6 @@
             </div> 
         </li> 
     </template> 
-    <script type="module" src="./src/index.js"></script> 
  
 </body> 
  

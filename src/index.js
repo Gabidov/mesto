@@ -1,4 +1,5 @@
 // console.log('Hello, World!');
+import './pages/index.css';
 
 import {
   initialCards,
@@ -20,6 +21,8 @@ import PopupWhithImage from './script/components/PopupWithImage.js';
 import Section from './script/components/Section.js';
 import UserInfo from './script/components/UserInfo.js';
 import PopupWhithForm from './script/components/PopupWhithForm.js';
+
+
 
 const userInfo = new UserInfo(configInfo);
 const popupImage = new PopupWhithImage(popupImageSelector);
