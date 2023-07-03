@@ -4,8 +4,10 @@
   "description": "_Проект был выполнен в целях самообразования на платформе Яндекс Практикум._",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode=production",
-    "dev": "webpack serve"
+    "build": "webpack --mode production",
+    "dev": "webpack serve",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
